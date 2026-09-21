@@ -1,0 +1,20 @@
+{
+  "generated_at": "2026-09-16T10:05:00Z",
+  "source_log": "sample_auth.log",
+  "rule": {
+    "description": "Failed SSH logins from one IP in a sliding window",
+    "threshold": 5,
+    "window_minutes": 5,
+    "mitre_attack": "T1110.001"
+  },
+  "alerts": [
+    {
+      "ip": "198.51.100.23",
+      "count": 5,
+      "start": "2026-09-16T10:00:10Z",
+      "end": "2026-09-16T10:04:30Z",
+      "usernames": ["admin", "root", "test"],
+      "mitre_attack": "T1110.001"
+    }
+  ]
+}
